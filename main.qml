@@ -31,42 +31,47 @@ Window {
 
     }
     Grid {
-               id:firstGrid
-               columns: 3
-               spacing: 2
-               anchors.centerIn: parent
-               KText {
-                   text: "7"
-                   }
-               KText {
-                   text: "8"
-                   }
+        id:firstGrid
+        columns: 3
+        spacing: 2
+        anchors.centerIn: parent
+        KText {
+            text: "7"
+        }
 
-               KText {
-                   text: "9"
-                   }
-               KText {
-                   text: "4"
-                   }
-               KText {
-                   text: "5"
-                   }
+        KText {
+            text: "8"
+        }
 
-               KText {
-                   text: "6"
-                   }
-               KText {
-                   text: "1"
-                   }
-               KText {
-                   text: "2"
-                   }
+        KText {
+            text: "9"
+        }
 
-               KText {
-                   text: "3"
-                   }
+        KText {
+            text: "4"
+        }
 
-           }
+        KText {
+            text: "5"
+        }
+
+        KText {
+            text: "6"
+        }
+
+        KText {
+            text: "1"
+        }
+
+        KText {
+            text: "2"
+        }
+
+        KText {
+            text: "3"
+        }
+
+    }
 }
 
 

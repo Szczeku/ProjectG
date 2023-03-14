@@ -1,4 +1,4 @@
-import QtQuick 2.15
+import QtQuick
 
 Rectangle {
     id:root
@@ -7,8 +7,10 @@ Rectangle {
     height: 50;
     Text {
         id:tekst
-        font.family: "Arial"
-        font.pixelSize: 25
+        font {
+        family: "Arial"
+        pixelSize: 25
+        }
         anchors.centerIn: parent
     }
 
