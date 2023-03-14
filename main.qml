@@ -7,13 +7,7 @@ Window {
     visible: true
     color: "black"
     title: qsTr("Hello World")
-    TextMetrics {
-        id: textMetrics
-        font.family: "Arial"
-        font.pixelSize: 25
 
-
-    }
 
     Column {
         id: column
@@ -41,95 +35,37 @@ Window {
                columns: 3
                spacing: 2
                anchors.centerIn: parent
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "7"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
+               KText {
+                   text: "7"
                    }
-               }
-
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "8"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
-                   }
-               }
-
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "9"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
-                   }
+               KText {
+                   text: "8"
                    }
 
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "4"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
+               KText {
+                   text: "9"
                    }
-               }
+               KText {
+                   text: "4"
+                   }
+               KText {
+                   text: "5"
+                   }
 
-               Rectangle {
-                   width: 50
-                   height: 50;
-                   Text {
-                       text: "5"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
+               KText {
+                   text: "6"
                    }
-               }
+               KText {
+                   text: "1"
+                   }
+               KText {
+                   text: "2"
+                   }
 
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "6"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
+               KText {
+                   text: "3"
                    }
-               }
 
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "1"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
-                   }
-               }
-
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "2"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
-                   }
-               }
-
-               Rectangle {
-                   width: 50;
-                   height: 50;
-                   Text {
-                       text: "3"
-                       font: textMetrics.font
-                       anchors.centerIn: parent
-                   }
-               }
            }
 }
 
