@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(pixel10 VERSION 0.1 LANGUAGES CXX)
+project(ProjectG VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -18,32 +18,32 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(pixel10
+    qt_add_executable(ProjectG
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
-#    set_property(TARGET pixel10 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#    set_property(TARGET ProjectG APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(pixel10 SHARED
+        add_library(ProjectG SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(pixel10
+        add_executable(ProjectG
           ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(pixel10
+target_link_libraries(ProjectG
   PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick)
 
-set_target_properties(pixel10 PROPERTIES
+set_target_properties(ProjectG PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -51,11 +51,11 @@ set_target_properties(pixel10 PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS pixel10
+install(TARGETS ProjectG
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_import_qml_plugins(pixel10)
-    qt_finalize_executable(pixel10)
+    qt_import_qml_plugins(ProjectG)
+    qt_finalize_executable(ProjectG)
 endif()
